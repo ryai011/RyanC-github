@@ -149,3 +149,94 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===============================
+   MOBILE-FIRST OPTIMIZATION
+   =============================== */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  /* Header */
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .nav a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 90px 0 60px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 50px 0;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Skills Grid */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid span {
+    font-size: 0.95rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: 18px;
+  }
+
+  /* Timeline */
+  .timeline li {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+}
+
