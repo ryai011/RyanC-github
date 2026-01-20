@@ -153,14 +153,14 @@ body {
 }
 
 /* ===============================
-   MOBILE NAV FIX
+   MOBILE NAV (FINAL FIX)
    =============================== */
 
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 200;
+  z-index: 999;
 }
 
 .hamburger span {
@@ -169,9 +169,9 @@ body {
   background: var(--text);
   margin: 4px 0;
   border-radius: 2px;
-  transition: 0.3s;
 }
 
+/* MOBILE ONLY */
 @media (max-width: 768px) {
 
   /* Show hamburger */
@@ -179,19 +179,14 @@ body {
     display: flex;
   }
 
-  /* Hide desktop nav */
-  .nav nav {
+  /* Hide menu by default */
+  #navMenu {
     display: none;
-  }
-
-  /* Mobile menu */
-  .nav nav.active {
-    display: flex;
     position: absolute;
     top: 65px;
     left: 0;
     width: 100%;
-    background: rgba(2,6,23,0.95);
+    background: rgba(2,6,23,0.97);
     backdrop-filter: blur(12px);
     flex-direction: column;
     align-items: center;
@@ -200,7 +195,12 @@ body {
     border-bottom: 1px solid var(--border);
   }
 
-  .nav nav a {
+  /* Show menu ONLY when active */
+  #navMenu.active {
+    display: flex;
+  }
+
+  #navMenu a {
     width: 90%;
     text-align: center;
     padding: 14px;
@@ -209,62 +209,6 @@ body {
     background: rgba(255,255,255,0.05);
   }
 }
-/* ===============================
-   MOBILE NAV FIX
-   =============================== */
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 200;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: var(--text);
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Hide desktop nav */
-  .nav nav {
-    display: none;
-  }
-
-  /* Mobile menu */
-  .nav nav.active {
-    display: flex;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background: rgba(2,6,23,0.95);
-    backdrop-filter: blur(12px);
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 25px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav nav a {
-    width: 90%;
-    text-align: center;
-    padding: 14px;
-    font-size: 1.05rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.05);
-  }
-}
 
 
