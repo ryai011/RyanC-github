@@ -12,3 +12,9 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+// Disable heavy animation on small screens
+if (window.innerWidth < 768) {
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("active");
+  });
+}
